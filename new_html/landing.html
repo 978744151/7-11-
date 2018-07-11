@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <style>
+        body{
+            background: white;
+        }
+        .bar_nav{
+            z-index: 10;
+            height: 44px;
+            padding-right: 10px;
+            padding-left: 10px;
+            border-bottom: 0;
+            background-color: #f7f7f7;
+            -webkit-box-shadow: 0 0 1px rgba(0,0,0,.85);
+            box-shadow: 0 0 1px rgba(0,0,0,.85);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .get_yzm{
+            position: absolute;
+            right: 12px;
+            top: 43px;
+            z-index: 99999;
+        }
+    </style>
+</head>
+<body>
+<div class="shop_login">
+    <div class="bar_nav">
+        <span class='mui-icon mui-icon-back' style='position: absolute; z-index : 999; margin-top: 10px;' onclick='window.history.go(-1)'></span>
+        <h2 class="mui-title">登陆</h2>
+    </div>
+    <form action="/loginaction"  class="mui-input-group">
+        <div class="mui-input-row">
+            <label>手机号:</label>
+            <input type="text" class='d_phone' >
+        </div>
+        <button type="button" class="mui-btn mui-btn-primary get_yzm">获取验证码</button>
+        <div class="mui-input-row">
+            <label>验证码</label>
+            <input type="text" class='d_yzm'  >
+        </div>
+        <div class="mui-button-row">
+            <button type="button" class="mui-btn mui-btn-primary d_denglu" class="">登陆</button>&nbsp;&nbsp;
+
+            <button type="button" class="mui-btn mui-btn-danger d_login" onclick="return false;">去注册</button>
+            <!--<button type="button" class="mui-btn mui-btn-danger"onclick="window.location.href='index.html'">去首页</button>-->
+        </div>
+    </form>
+</div>
+<script src="../newjs/jquery.min.js"></script>
+<script src="../newjs/fastclick.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script>
+    $('.get_yzm').on('click',function(){
+    var phonenum = $(".d_phone").val();
+    if(phonenum.toString().length != 11){
+        mui.toast('请填写正确的手机号')
+        return false
+    }
+    $.ajax({
+        url:url+"/api/api-bin/wyy/entry/sendSmsCode.action",
+        type:'get',
+        data:{"phonenumber": phonenum,"deviceid":'1111','type':1},
+        success:function(data){
+            console.log(data);
+            mui.toast("发送成功");
+            $('.d_yzm').val(data.result.yzm)
+            nowSecond = 60;
+            $('.get_yzm').unbind("click");
+            $('.get_yzm').html('重新发送('+nowSecond+')');
+            yz_timer = setInterval(function(){
+                nowSecond--;
+                if(nowSecond <= 0){
+                    $('.get_yzm').bind("click");
+                    $('.get_yzm').html('获取验证码');
+                    clearInterval(yz_timer)
+                    yz_timer = null;
+                }else{
+                    $('.get_yzm').html('重新发送('+nowSecond+')');
+                }
+            },1000)
+        },
+        error:function(){
+            mui.toast("网络错误，请稍后再试")
+        }
+    })
+})
+
+    login()
+</script>
+</body>
+</html>

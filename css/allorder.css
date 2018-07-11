@@ -1,0 +1,284 @@
+.order_category {
+  width: 100%;
+  display: flex;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 45px;
+  z-index: 999;
+  background-color: #fff;
+  max-width: 750px;
+}
+.order_category span {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  color: #666666;
+}
+.order_category .on {
+  color: #4038A5;
+}
+.allorder_content,
+.allorder_content2 {
+  height: 100%;
+  position: relative;
+}
+.allorder_content .history_box,
+.allorder_content2 .history_box,
+.allorder_content .history_box2,
+.allorder_content2 .history_box2 {
+  padding-top: 35px;
+}
+.allorder_content .history_box .allorder_list,
+.allorder_content2 .history_box .allorder_list,
+.allorder_content .history_box2 .allorder_list,
+.allorder_content2 .history_box2 .allorder_list {
+  position: relative;
+  width: 100%;
+  background: white;
+  margin-bottom: 10px;
+}
+.allorder_content .history_box .allorder_list .allorder_bh,
+.allorder_content2 .history_box .allorder_list .allorder_bh,
+.allorder_content .history_box2 .allorder_list .allorder_bh,
+.allorder_content2 .history_box2 .allorder_list .allorder_bh {
+  height: 40px;
+  padding: 0px 15px 0px 15px;
+  line-height: 40px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.allorder_content .history_box .allorder_list .allorder_bh p,
+.allorder_content2 .history_box .allorder_list .allorder_bh p,
+.allorder_content .history_box2 .allorder_list .allorder_bh p,
+.allorder_content2 .history_box2 .allorder_list .allorder_bh p {
+  color: #4038a5;
+  font-size: 14px;
+}
+.allorder_content .history_box .allorder_list .history_list,
+.allorder_content2 .history_box .allorder_list .history_list,
+.allorder_content .history_box2 .allorder_list .history_list,
+.allorder_content2 .history_box2 .allorder_list .history_list {
+  padding: 6px 15px;
+  display: flex;
+  height: 100px;
+  border-bottom: 3px solid #f5f5f5;
+}
+.allorder_content .history_box .allorder_list .history_list .history_img,
+.allorder_content2 .history_box .allorder_list .history_list .history_img,
+.allorder_content .history_box2 .allorder_list .history_list .history_img,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_img {
+  width: 20%;
+  width: 80px;
+  height: 80px;
+  margin-top: 4px;
+}
+.allorder_content .history_box .allorder_list .history_list .history_img img,
+.allorder_content2 .history_box .allorder_list .history_list .history_img img,
+.allorder_content .history_box2 .allorder_list .history_list .history_img img,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_img img {
+  height: 100%;
+  width: 100%;
+}
+.allorder_content .history_box .allorder_list .history_list .history_info,
+.allorder_content2 .history_box .allorder_list .history_list .history_info,
+.allorder_content .history_box2 .allorder_list .history_list .history_info,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_info {
+  width: 80%;
+  margin-left: 15px;
+  padding: 6px 0px;
+}
+.allorder_content .history_box .allorder_list .history_list .history_info p,
+.allorder_content2 .history_box .allorder_list .history_list .history_info p,
+.allorder_content .history_box2 .allorder_list .history_list .history_info p,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_info p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.allorder_content .history_box .allorder_list .history_list .history_info div,
+.allorder_content2 .history_box .allorder_list .history_list .history_info div,
+.allorder_content .history_box2 .allorder_list .history_list .history_info div,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_info div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.allorder_content .history_box .allorder_list .history_list .history_info div > span,
+.allorder_content2 .history_box .allorder_list .history_list .history_info div > span,
+.allorder_content .history_box2 .allorder_list .history_list .history_info div > span,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_info div > span {
+  color: #999999;
+  font-size: 14px;
+}
+.allorder_content .history_box .allorder_list .history_list .history_info div > p,
+.allorder_content2 .history_box .allorder_list .history_list .history_info div > p,
+.allorder_content .history_box2 .allorder_list .history_list .history_info div > p,
+.allorder_content2 .history_box2 .allorder_list .history_list .history_info div > p {
+  font-size: 14px;
+  color: #333333;
+}
+.allorder_content .history_box .allorder_list .order_hj,
+.allorder_content2 .history_box .allorder_list .order_hj,
+.allorder_content .history_box2 .allorder_list .order_hj,
+.allorder_content2 .history_box2 .allorder_list .order_hj {
+  height: 40px;
+  padding: 0px 15px 0px 15px;
+  line-height: 40px;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: flex-end;
+}
+.allorder_content .history_box .allorder_list .order_hj span,
+.allorder_content2 .history_box .allorder_list .order_hj span,
+.allorder_content .history_box2 .allorder_list .order_hj span,
+.allorder_content2 .history_box2 .allorder_list .order_hj span {
+  color: #333333;
+  font-size: 14px;
+}
+.allorder_content .history_box .allorder_list .order_button,
+.allorder_content2 .history_box .allorder_list .order_button,
+.allorder_content .history_box2 .allorder_list .order_button,
+.allorder_content2 .history_box2 .allorder_list .order_button {
+  height: 40px;
+  padding: 0px 15px 0px 15px;
+  line-height: 40px;
+  border-bottom: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: flex-end;
+}
+.allorder_content .history_box .allorder_list .order_button button,
+.allorder_content2 .history_box .allorder_list .order_button button,
+.allorder_content .history_box2 .allorder_list .order_button button,
+.allorder_content2 .history_box2 .allorder_list .order_button button {
+  width: 72px;
+  height: 30px;
+  border-radius: 30px;
+  line-height: 19px;
+  /* text-align: center; */
+  color: #4038A5;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.allorder_content .return_goods,
+.allorder_content2 .return_goods,
+.allorder_content .return_goods_two,
+.allorder_content2 .return_goods_two {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 60px;
+  padding: 0px 15px;
+  border-bottom: 1px solid #f5f5f5;
+}
+.allorder_content .return_goods .return_img,
+.allorder_content2 .return_goods .return_img,
+.allorder_content .return_goods_two .return_img,
+.allorder_content2 .return_goods_two .return_img {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+}
+.allorder_content .return_goods .return_img img,
+.allorder_content2 .return_goods .return_img img,
+.allorder_content .return_goods_two .return_img img,
+.allorder_content2 .return_goods_two .return_img img {
+  width: 100%;
+  height: 100%;
+}
+.allorder_content .return_goods .right,
+.allorder_content2 .return_goods .right,
+.allorder_content .return_goods_two .right,
+.allorder_content2 .return_goods_two .right {
+  width: 9px;
+  height: 15px;
+  margin-top: 20px;
+}
+.allorder_content .order_price,
+.allorder_content2 .order_price,
+.allorder_content .order_cause,
+.allorder_content2 .order_cause,
+.allorder_content .order_status,
+.allorder_content2 .order_status,
+.allorder_content .order_image,
+.allorder_content2 .order_image {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 0px 15px;
+  margin-top: 1px;
+}
+.allorder_content .order_price span,
+.allorder_content2 .order_price span,
+.allorder_content .order_cause span,
+.allorder_content2 .order_cause span,
+.allorder_content .order_status span,
+.allorder_content2 .order_status span,
+.allorder_content .order_image span,
+.allorder_content2 .order_image span {
+  color: #333333;
+  font-size: 14px;
+}
+.allorder_content .order_price img,
+.allorder_content2 .order_price img,
+.allorder_content .order_cause img,
+.allorder_content2 .order_cause img,
+.allorder_content .order_status img,
+.allorder_content2 .order_status img,
+.allorder_content .order_image img,
+.allorder_content2 .order_image img {
+  width: 9px;
+  height: 15px;
+  margin-top: 12px;
+  vertical-align: sub;
+}
+.allorder_content .order_price .flex_right,
+.allorder_content2 .order_price .flex_right,
+.allorder_content .order_cause .flex_right,
+.allorder_content2 .order_cause .flex_right,
+.allorder_content .order_status .flex_right,
+.allorder_content2 .order_status .flex_right,
+.allorder_content .order_image .flex_right,
+.allorder_content2 .order_image .flex_right {
+  position: relative;
+}
+.allorder_content .order_explain,
+.allorder_content2 .order_explain,
+.allorder_content .order_express_gs,
+.allorder_content2 .order_express_gs,
+.allorder_content .order_explain_dh,
+.allorder_content2 .order_explain_dh {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  display: flex;
+  background: #ffffff;
+  padding: 0px 15px;
+  margin-top: 10px;
+}
+.allorder_content .order_explain span,
+.allorder_content2 .order_explain span,
+.allorder_content .order_express_gs span,
+.allorder_content2 .order_express_gs span,
+.allorder_content .order_explain_dh span,
+.allorder_content2 .order_explain_dh span {
+  color: #333333;
+  font-size: 14px;
+}
+.allorder_content .order_explain input,
+.allorder_content2 .order_explain input,
+.allorder_content .order_express_gs input,
+.allorder_content2 .order_express_gs input,
+.allorder_content .order_explain_dh input,
+.allorder_content2 .order_explain_dh input {
+  font-size: 14px;
+  border: none;
+  resize: none;
+  margin: 0;
+  width: 80%;
+}

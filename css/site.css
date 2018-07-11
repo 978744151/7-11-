@@ -1,0 +1,91 @@
+.site_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.site_content .site_box {
+  padding: 15px 10px 0px 10px ;
+  width: 100%;
+}
+.site_content .site_box .site_list {
+  width: 100%;
+  background: white;
+  padding: 10px 15px 5px 15px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+.site_content .site_box .site_list .site_name {
+  display: flex;
+  justify-content: space-between;
+}
+.site_content .site_box .site_list .site_name > p,
+.site_content .site_box .site_list .site_name span {
+  font-size: 14px;
+  color: #333333;
+}
+.site_content .site_box .site_list .site_info {
+  margin-top: 6px;
+  display: flex;
+}
+.site_content .site_box .site_list .site_info span {
+  width: 14px;
+  height: 16px;
+  background: url('../images/site.png');
+  display: inline-block;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+  vertical-align: top;
+  position: absolute;
+}
+.site_content .site_box .site_list .site_info p {
+  display: inline-block;
+  color: #666666;
+  margin-left: 20px;
+  vertical-align: top;
+}
+.site_content .site_box .site_list .site_moren {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.site_content .site_box .site_list .site_moren .site_more_span {
+  position: absolute;
+  top: 6px;
+  left: 33px;
+  font-size: 14px;
+  color: #333333;
+}
+.site_content .site_box .site_list .site_moren > p {
+  margin-top: 5px;
+}
+.site_content .site_box .site_list .site_moren > p img {
+  width: 20px;
+  height: 20px;
+  vertical-align: bottom;
+}
+.site_content .site_box .site_list .site_moren > p span {
+  margin-left: 10px;
+  color: #666666;
+}
+.site_bottom {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  bottom: 5px;
+}
+.site_bottom button {
+  color: white;
+  font-size: 16px;
+  width: 280px;
+  height: 42px;
+  text-align: center;
+  line-height: 33px;
+  background: -webkit-linear-gradient(left, #7a55f3, #2ee2df);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #7a55f3, #2ee2df);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #7a55f3, #2ee2df);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #7a55f3, #2ee2df);
+  border-radius: 50px;
+}

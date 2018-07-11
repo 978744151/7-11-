@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="lt_footer">
+    <ul>
+        <li id="index" data-link="index">
+            <span class="iframe_index now"></span>
+            <p>首页</p>
+        </li>
+        <!--<li id="category"  url="category.html">-->
+        <!--<span class="iframe_category"></span>-->
+        <!--<p>分类</p>-->
+        <!--</li>-->
+        <li id="cart" data-link="cart">
+            <span class="iframe_cart"></span>
+            <p>购物车</p>
+        </li>
+        <li id="user" data-link="user">
+            <span class="iframe_user"></span>
+            <p>会员中心</p>
+        </li>
+    </ul>
+</div>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script>
+    $('li').on('click', function () {
+        var url = $(this).data('link');
+        window.location.href = url;
+    })
+    var url = location.href;
+    if (url.indexOf('index.html') != -1) {
+        $('#index').find('span').addClass('now');
+        $('#index').addClass('now');
+    } else if (url.indexOf('cart.html') != -1) {
+        $('#cart').find('span').addClass('now');
+        $('#cart').addClass('now');
+    }
+    else if (url.indexOf('user.html') != -1) {
+        $('#user').find('span').addClass('now');
+        $('#user').addClass('now');
+    }
+</script>
+</body>
+</html>

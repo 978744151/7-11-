@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="container" style="padding-bottom: 0px;">
+    <div class="collect_header">
+        <img src="../images/Arrow.png" alt="" onclick="history.back()">
+        <h4 style='color: white'>浏览记录</h4>
+        <span class='cart_bianji'>编辑</span>
+        <span class='cart_header_true'>完成</span>
+    </div>
+    <div class="collect_content">
+        <div class="mui-scroll-wrapper" id="pull">
+            <div class="mui-scroll">
+                <div class="history_box">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="collect_footer" style='display: none;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    z-index: 9999999;
+    background: #fff;'>
+        <div class='cart_bottom_one'>
+            <div class="amount">
+                <div style='margin-left: 50px;'>
+                    <span class="mui-input-row mui-checkbox mui-left">
+                        <input name="checkbox" type="checkbox" class='foot_ck' style="top: -5px; left: -35px;">
+                    </span>
+                    <span style="color: #999999">全选</span>
+                </div>
+            </div>
+            <button class="cart_settle">删除</button>
+        </div>
+    </div>
+</div>
+<script type='text/html' id='tpl'>
+
+</script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script src="../newjs/history.js"></script>
+</body>
+</html>

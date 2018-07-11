@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="container" >
+    <div class="header">
+        <img src="../images/Arrow.png" alt="" onclick="history.back()">
+        <h4 style='color: white'>核对订单</h4>
+    </div>
+    <div class='info_content'>
+        <div class="mui-scroll-wrapper" id="pull">
+            <div class="mui-scroll">
+                <div class='order_info_content'>
+                    <div class="order_site" style="margin-top: 0;">
+                        <!--<div class='order_img'>-->
+                            <!--<img src="../images/site.png" alt="">-->
+                        <!--</div>-->
+                        <!--<div class="order_info_per">-->
+                            <!--<div>-->
+                                <!--<p>你还没有添加地址</p>-->
+                                <!--&lt;!&ndash;<p>12112121212</p>&ndash;&gt;-->
+                            <!--</div>-->
+                            <!--<span style="display: flex;justify-content: space-between">-->
+                                <!--<span></span>-->
+                                <!--<span style="color: #4038a5;">添加地址</span>-->
+                            <!--</span>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="order_wakeng">
+<!--挖个坑-->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order_pay">
+        <span class="order_sfk"></span>
+        <button class='cart_settle'> 去结算</button>
+    </div>
+</div>
+
+<div class='order_layer'>
+    <div class="header">
+        <img src="../images/Arrow.png" alt="" class="layer_down">
+        <h4 style='color: white'>更改地址</h4>
+        <span class="order_admin sitesave">管理</span>
+    </div>
+    <div class='order_layer_content'>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <div class="site_box">
+
+            </div>
+        </div>
+    </div>
+    <div class='site_bottom' onclick="window.top.location = 'site.html'">
+        <button class='add_site'>添加新地址</button>
+    </div>
+</div>
+<script type="text/html" id="tpl">
+    {{each result.goods v i}}
+    <div class="allorder_list">
+        <div class="history_list">
+            <div class="history_img">
+                <img src="{{v.commoditypic}}" alt="">
+            </div>
+            <div class="history_info" >
+                <p style="color: black;">{{v.commodityname}}</p>
+                <div style="margin-top: 35px;">
+                    <span>X{{v.goodsnum}}</span>
+                    <span>&yen;{{v.goodsprice}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+    <div class='order_text'>
+        <input type="text" placeholder="买家留言" class='pay_text'>
+    </div>
+    <div class="order_total">
+        <span>商品总价</span>
+        <span>&yen;{{checked_price}}</span>
+    </div>
+    <div class="order_yf">
+        <span>商品运费</span>
+        <span>免运费</span>
+    </div>
+
+</script>
+<script src="../newjs/jquery.min.js"></script>
+<script src="../newjs/fastclick.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script src="../newjs/white_order.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="../images/Arrow.png" alt="" onclick="history.back()">
+        <h4 style='color: white'>新建地址</h4>
+        <span class='sitesave'>保存</span>
+    </div>
+    <div class="site_content">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <div class='site'>
+                    <input type="text" placeholder='省市城市区县' class='site_city'>
+                    <input type="text" placeholder='详细地址、如街道、楼盘号等' class='Indetail'>
+                    <input type="text" placeholder='姓名' class='siteName'>
+                    <input type="text" placeholder='手机号码' class='site_number'>
+                </div>
+
+                <div class='site_normal'>
+                    <!--<span class='pay_list_c1 on'>-->
+                        <!--<input type="checkbox" name="paylist" value="1" class="radioclass">-->
+                    <!--</span>-->
+                     <span>
+                        <span class="mui-input-row mui-checkbox mui-left" >
+                        <input data-id="{{v.addressid}}" name="checkbox1" type="checkbox" class="side_ck" style="left: -32px;top: -6px;">
+                        </span>
+                     </span>
+                    <span>设为默认地址</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../newjs/jquery.min.js"></script>
+<script src="../newjs/fastclick.js"></script>
+<script src="../lib/jQueryDistpicker/js/distpicker.data.js"></script>
+<script src="../lib/jQueryDistpicker/js/distpicker.js"></script>
+<script src="../lib/jQueryDistpicker/js/main.js"></script>
+<script src='../lib/layer.mobile-v2.0/layer_mobile/layer.js'></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script src="../newjs/addsite.js"></script>
+<script>
+
+</script>
+</body>
+</html>

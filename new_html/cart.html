@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="cart_container">
+    <div class="cart_header">
+        <!--<img src="../images/Arrow.png" alt="" onclick="history.back()">-->
+        <!--<img src="../images/Free_Chat_Typing.png" alt="" class="kefu" >-->
+        <h4 style='color: white'>购物车</h4>
+        <span class='cart_bianji'>编辑</span>
+        <span class='cart_header_true'>完成</span>
+    </div>
+    <div class="cart_content">
+        <div class="mui-scroll-wrapper" id="pull">
+            <div class="mui-scroll">
+                <div class='cart_list' >
+
+                </div>
+            </div>
+        </div>
+    </div>
+     <span class="mui-input-row mui-checkbox mui-left">
+        <input name="checkbox" type="checkbox" class='foot_ck' style="top: 14px; left: 13px;">
+    </span>
+    <div class="cart_footer_one">
+        <div class='cart_bottom_one'>
+            <div class="amount">
+                <div style='margin-left: 50px;'>
+
+                    <span style="color: #999999">全选</span>
+                </div>
+                <span class='cart_totle'>合计:<span class='cart_all'></span></span>
+            </div>
+            <button class="cart_settle">去付款</button>
+        </div>
+     </div>
+
+    <div class="cart_footer_two">
+        <div class='cart_bottom_two'>
+            <div class="amount">
+                <div style='margin-left: 50px;'>
+                    <span style="color: #999999">全选</span>
+                </div>
+            </div>
+            <div style="position: relative">
+                <button class="cart_collect">收藏</button>
+                <button class="cart_foot_del">删除</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="lt_footer">
+    <ul>
+        <li  id="index" onclick="window.location.href = 'index.html'" >
+            <span class="iframe_index "></span>
+            <p>首页</p>
+        </li>
+        <li id="category"  onclick="window.location.href = 'category.html'">
+            <span class="iframe_category"></span>
+            <p>分类</p>
+        </li>
+        <li id="cart"  onclick="window.location.href = 'cart.html'" class='now'>
+            <span class="iframe_cart now"></span>
+            <p>购物车</p>
+        </li>
+        <li id="user"  onclick="window.location.href = 'user.html'">
+            <span class="iframe_user"></span>
+            <p>会员中心</p>
+        </li>
+    </ul>
+</div>
+<div class='pro_layer'>
+    <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <div class="pro_tpl2 ">
+                <!--<img src="../images/product.jpg" alt="">-->
+                <!--<p>￥<span  class="cart_layer_price">123</span></p>-->
+                <!--<p>库存:<span class="storeage">123</span>件</p>-->
+            </div>
+            <div class='pro_tpl1'>
+                <div class="layer">
+                    <!--<div>-->
+                        <!--<p>请选择尺码</p>-->
+                        <!--<div class="pro_color">-->
+                            <!--<span class="now">16G</span>-->
+                            <!--<span >16G</span>-->
+                            <!--<span >16G</span>-->
+                            <!--<span >16G</span>-->
+                       <!--</div>-->
+                    <!--</div>-->
+            </div>
+        </div>
+    </div>
+    <div class='car_fast_button'>
+        <button class='cart_true' style='width: 100%;'>确定</button>
+    </div>
+    </div>
+</div>
+<div class='cart_mengceng'>
+
+</div>
+<script type='text/html' id='tpl'>
+    {{if result.record.length == 0}}
+    <p style='margin-left: 10px; margin-top: 10px;'>未添加购物车</p>
+    {{/if}}
+    {{if result.record.length > 0}}
+    {{each result.record v i}}
+    <div class="goods-list">
+        <li class="mui-table-view-cell  mui-transitioning" data-id='{{v.barcode}}'
+            style='width:100%;height:132px;'>
+            <div class="mui-slider-right mui-disabled">
+                <a class="btn_edit mui-btn mui-btn-blue mui-icon mui-icon-compose"
+                   data-morespec= '{{v.morespec}}'
+                   data-id= '{{v.barcode}}'
+                   data-cardid= '{{v.cartid}}'
+                   data-number= '{{v.goodsnum}}'
+                ></a>
+                <a data-id="{{v.cartid}}"
+                   class="btn_delete mui-btn mui-btn-red mui-icon mui-icon-trash"></a>
+            </div>
+            <div class="mui-slider-handle">
+                <div class=" cart_list_dan" data-id='{{v.barcode}}' data-cartid= '{{v.cartid}}'>
+                            <span class="mui-input-row mui-checkbox" style="width: 30px;" >
+                                <input name="checkbox1" type="checkbox" class="ck"
+                                       data-id="{{v.cartid}}"
+                                       data-number="{{v.goodsnum}}"
+                                       data-price="{{v.goodsprice}}"
+                                       data-storage="{{v.storage}}"
+                                       data-specstorage="{{v.specstorage}}"
+                                       data-morespec="{{v.morespec}}"
+                                       data-barcode="{{v.barcode}}"
+                                    >
+                             </span>
+                    <div class='cart_list_img'>
+                        <img src="{{v.commoditypic}}" alt="" data-id={{v.barcode}} class='cart_img'>
+                    </div>
+                    <div class='cart_list_name'>
+                        <span style="font-size: 14px; color: #666666;">{{v.commodityname}}</span>
+                        <%if( v.morespec == 1){ %>
+                        <div class='cart_list_spec'
+                             data-morespec= '{{v.morespec}}'
+                             data-id= '{{v.barcode}}'
+                             data-cardid= '{{v.cartid}}'
+                             data-number= '{{v.goodsnum}}'>
+                            <span>{{v.speckeyname}}</span>
+                            <img src="../images/xiabiao.png" alt="">
+                        </div>
+                        <%}else{ %>
+                        <div class='cart_list_spec' data-morespec="{{v.morespec}}"
+                             data-id="{{v.barcode}}"
+                             data-cardid='{{v.cartid}}'
+                             data-number='{{v.goodsnum}}'>
+                            <span>{{v.speckeyname}}</span>
+                            <img src="../images/xiabiao.png" alt="">
+                        </div>
+                        <%} %>
+                        <div class='cart_list_price'>
+                            <span>￥{{v.goodsprice}}</span>
+                            <div>
+                                <div class="mui-numbox" data-numbox-step='1' data-numbox-min='1'
+                                     data-numbox-max='100' style=" background: white; width: 85px;padding: 0 20px; ">
+                                    <button style="border-right: 1px solid #dddddd;width: 25px;background: white" class="mui-btn mui-numbox-btn-minus" type="button">
+                                        <img src="../images/-.png" alt="" style="width:  12px;height:  2px;width: 12px;height: 2px;position: absolute;top: 14px;left: 7px;"></button>
+                                    <input class="mui-numbox-input" type="number" value='{{v.goodsnum}}'
+                                           data-number="{{v.goodsnum}}" data-id="{{v.cartid}}"
+                                           data-stu="{{v.sku}}" style="color: #cccccc;font-size: 14px;border-left:none!important;"/>
+                                    <button style="border-left: 1px solid #dddddd;width: 25px;background: white" class="mui-btn mui-numbox-btn-plus" type="button">
+                                        <img src="../images/+.png" alt="" style="width:  12px;height:12px;">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </div>
+    {{/each}}
+    {{/if}}
+</script>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script src="../newjs/new_cart.js"></script>
+</body>
+</html>

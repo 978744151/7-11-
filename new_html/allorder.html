@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="container" style="padding-bottom: 0;">
+    <div class="header">
+        <img src="../images/Arrow.png" alt="" onclick="location.href='user.html'">
+        <h4 style='color: white'>订单管理</h4>
+    </div>
+    <div class="order_category">
+        <!--<span  :class="{'on' :color === '1'}" @click="changecolor('1')">全部</span> -->
+        <span class='wait_all on' data-id='all'>全部</span>
+        <span class='wait_fk' data-id='dfk'>待付款</span>
+        <span class='wait_fh' data-id='dfh'>待发货</span>
+        <span class='wait_sh' data-id='dsh'>待收货</span>
+        <span class='wait_cm' data-id='dpj'>待评价</span>
+    </div>
+    <div class="allorder_content all">
+        <div class="mui-scroll-wrapper" id="pull" >
+            <div class="mui-scroll" >
+                <div class="history_box renderall">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="allorder_content dfk">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll" >
+                <div class="history_box renderdfk">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="allorder_content dfh">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll" >
+                <div class="history_box renderdfh">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="allorder_content dsh">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll" >
+                <div class="history_box renderdsh">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="allorder_content dpj">
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll" >
+                <div class="history_box renderdpj">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script src="../newjs/allorder.js"></script>
+</body>
+</html>

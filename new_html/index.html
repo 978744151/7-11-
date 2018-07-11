@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+</head>
+<body>
+<!--<iframe>-->
+<div class="container">
+    <div class="header">
+        <div class='lt_search_box'>
+            <div class="lt_search">
+                <img src="../images/Arrow.png" alt="">
+                <img src="../images/Free_Chat_Typing.png" alt="">
+                <i class='mui-icon mui-icon-search' style="color: white"></i>
+                <input type="text" class="search_text" placeholder="请输入搜索关键字">
+            </div>
+        </div>
+    </div>
+    <div class="Incontent" >
+        <div class="mui-scroll-wrapper" id="pull" >
+            <div class="mui-scroll" >
+                <div class='mui-content'>
+                    <!--轮播图-->
+                    <div class="index_banner">
+                        <!--挖个坑-->
+                    </div>
+                    <!--<div class="list">-->
+                    <!--<a>-->
+                        <!--<img src="../images/product.jpg" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/detail.jpg" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/product.jpg" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/detail.jpg" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--<a>-->
+                        <!--<img src="../images/product.jpg" alt="">-->
+                        <!--<span>XX</span>-->
+                    <!--</a>-->
+                    <!--导航-->
+                    <div class="navgate">
+
+                    </div>
+                    <!--产品列表页-->
+                    <div class="goods-list" >
+                        <!--<div class='goods-item'>-->
+                        <!--<div class='goods_item_img'>-->
+                        <!--<img src="../images/product.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--<div class='goods_item_p'>-->
+                        <!--<p>啊实打实大师大师大师大师的</p>-->
+                        <!--</div>-->
+                        <!--<div class='goods_item_span'>-->
+                        <!--<span>包邮</span>-->
+                        <!--<span>推荐</span>-->
+                        <!--<span>新品</span>-->
+                        <!--</div>-->
+                        <!--<div class='goods_item_price'>-->
+                        <!--<span style='color: #4038a9;'>￥69</span><span style="font-size: 12px;"><del>原价:159</del></span>-->
+                        <!--<span style="font-size: 12px;">多少人购买</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class='goods-item'>-->
+                        <!--<div class='goods_item_img'>-->
+                        <!--<img src="../images/product.jpg" alt="">-->
+                        <!--</div>-->
+                        <!--<div class='goods_item_p'>-->
+                        <!--<p>啊实打实大师大师大师大师的</p>-->
+                        <!--</div>-->
+                        <!--<div class='goods_item_span'>-->
+                        <!--<span>包邮</span>-->
+                        <!--<span>推荐</span>-->
+                        <!--<span>新品</span>-->
+                        <!--</div>-->
+                        <!--<div class='goods_item_price'>-->
+                        <!--<span><span style='color: #4038a9;'>￥69</span><span style="font-size: 12px;"><del>原价:159</del></span></span>-->
+                        <!--<span style="font-size: 12px;">多少人购买</span>-->
+                        <!--</div>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="lt_footer">
+        <ul>
+            <li  id="index" onclick="window.location.href = 'index.html'" class='now'>
+                <span class="iframe_index now"></span>
+                <p>首页</p>
+            </li>
+            <li id="category"  onclick="window.location.href = 'category.html'">
+                <span class="iframe_category"></span>
+                <p>分类</p>
+            </li>
+            <li id="cart"  onclick="window.location.href = 'cart.html'">
+                <span class="iframe_cart"></span>
+                <p>购物车</p>
+            </li>
+            <li id="user"  onclick="window.location.href = 'user.html'">
+                <span class="iframe_user"></span>
+                <p>会员中心</p>
+            </li>
+        </ul>
+    </div>
+</div>
+    <!--</iframe>-->
+    <script type=text/html id="tpl">
+        <div class="mui-slider">
+            <div class="mui-slider-group mui-slider-loop banner_img">
+                <div class="mui-slider-item mui-slider-item-duplicate"><a href="#" style="text-align: center" ><img  src="{{result.Banner[result.Banner.length-1].commoditycarousel}}"  data-id="{{result.Banner[result.Banner.length-1].barcode}}" class='in_banner' /></a></div>
+                {{each result.Banner v i}}
+                <div class="mui-slider-item index_banner"><a href="#" style="text-align: center"  ><img src="//gw.alicdn.com/imgextra/i2/169/TB2lsr2nf1TBuNjy0FjXXajyXXa_!!169-0-lubanu.jpg"  data-id="{{v.barcode}}" class='in_banner' /></a></div>
+                {{/each}}
+                <div class="mui-slider-item mui-slider-item-duplicate" ><a href="#" style="text-align: center" ><img src="{{result.Banner[0].commoditycarousel}}" data-id="{{result.Banner[0].barcode}}" class='in_banner'/></a></div>
+            </div>
+            <div class="mui-slider-indicator mui-text-right">
+                {{each result.Banner v i}}
+                <div class="mui-indicator {{i===0?'mui-active':''}}"></div>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+    <script src="../lib/zepto/zepto.min.js"></script>
+    <script src="../lib/mui/js/mui.min.js"></script>
+    <script src="../lib/artTemplate/template-web.js"></script>
+    <script src="../newjs/common.js"></script>
+    <script src="../newjs/index.js"></script>
+    <script>
+        var gallery = mui('.mui-slider');
+        gallery.slider({
+            interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+        });
+        $('.search_text').on('focus', function () {
+            document.activeElement.blur();
+            openWindow('search.html')
+        })
+    </script>
+</body>
+</html>

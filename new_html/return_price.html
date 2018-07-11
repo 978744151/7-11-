@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/new_marge.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.picker.all.css">
+</head>
+<body>
+<div class="container" style="padding-bottom: 0;">
+    <div class="header">
+        <img src="../images/Arrow.png" alt="" onclick="history.back()">
+        <h4 style='color: white'>退款/售后</h4>
+    </div>
+    <div class='allorder_content2'>
+        <div class="mui-scroll-wrapper" id="pull">
+            <div class="mui-scroll">
+                <div class='history_box2' style="padding: 0;">
+                    <div class="allorder_list">
+                        <div class="allorder_bh">
+                            <p>订单编号: ' + data.result.record[i].ordersn + '</p>
+                        </div>
+                        <div class="history_list">
+                            <div class="history_img">
+                                <img src="../images/allorder.png" alt="">
+                            </div>
+                            <div class="history_info">
+                                <p style="color: black;" class='returngoods_name'>32113</p>
+                                <div class='returngoods_spec' style="margin-top: 35px;">
+                                    <span></span>
+                                    <p>&yen;213</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order_status" id='showUserPicker' >
+                        <span>货品状态</span>
+                        <dic class="flex_right">
+                            <span id='userResult' class="ui-alert"></span>
+                            <img src="../images/right.png" alt="">
+                        </dic>
+                    </div>
+                    <div class="order_cause " id='order_cause'>
+                        <span>退款原因</span>
+                        <dic class="flex_right">
+                            <span id='causerResult' class="ui-alert"></span>
+                            <img src="../images/right.png" alt="">
+                        </dic>
+                    </div>
+                    <div class="order_price">
+                        <span>退款金额</span>
+                        <p style="color:#4038a5">&yen;89</p>
+                    </div>
+                    <div class="order_explain">
+                        <span>退款说明</span>
+                        <input type="text" placeholder="选填">
+                    </div>
+                    <!--<div class="order_image">-->
+                        <!--<span>上传图片凭证（最多4张）</span>-->
+                    <!--</div>-->
+                </div>
+                <div class="and_draw_button">
+                    <button id='alertBtn' type="button" class="mui-btn mui-btn-blue mui-btn-outlined">提交申请</button>
+                </div>
+                <div id="info"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../lib/zepto/zepto.min.js"></script>
+<script src="../lib/mui/js/mui.min.js"></script>
+<script src="../lib/mui/js/mui.picker.js"></script>
+<script src="../lib/mui/js/mui.poppicker.js"></script>
+<script src="../lib/artTemplate/template-web.js"></script>
+<script src="../newjs/common.js"></script>
+<script src="../newjs/retrunPrice.js"></script>
+</body>
+</html>

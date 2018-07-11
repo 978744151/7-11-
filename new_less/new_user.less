@@ -1,0 +1,114 @@
+.user_header{
+  height: 45px;
+  width: 100%;
+  background: -webkit-linear-gradient(left, #7a55f3, #2ee2df);
+  /* Safari 5.1 - 6.0 */
+  background: -o-linear-gradient(right, #7a55f3, #2ee2df);
+  /* Opera 11.1 - 12.0 */
+  background: -moz-linear-gradient(right, #7a55f3, #2ee2df);
+  /* Firefox 3.6 - 15 */
+  background: linear-gradient(to right, #7a55f3, #2ee2df);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  max-width: 750px;
+  z-index: 9999;
+  h4{
+    width: 100%;
+    height: 45px;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    line-height: 45px;
+    margin: 0;
+  }
+  .kefu{
+    width: 24px;
+    height: 22px;
+    position: absolute;
+    right:8px;
+    top:10px;
+  }
+}
+.user_content{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #fff;
+  .bgc_img{
+    width: 100%;
+    height: 186px;
+    background: url(../images/bg.png);
+    -webkit-background-size:100% 100%;
+    background-size:100% 100%;
+    padding-top: 40px;
+    padding-left: 15px;
+    display: flex;
+    .user_userimg{
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      img{
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .user_id{
+      margin-top: 12px;
+      margin-left: 10px;
+      p{
+        color: white;
+      }
+    }
+  }
+  .user_biao{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .user_list{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      .userbox:nth-child(3n+0){
+        border-right: 0;
+      }
+      .userbox:nth-child(1),.userbox:nth-child(4),.userbox:nth-child(7){
+        border-left: 0;
+      }
+      .userbox{
+        position: relative;
+        width: 33.33%;
+        text-align: center;
+        border-right: 1px solid #f5f5f5;
+        border-bottom: 1px solid #f5f5f5;
+        border-top: 0;
+        .user_two{
+          width: 100%;
+          text-align: center;
+          img{
+            width: 35px;
+            height: 35px;
+          }
+        }
+        span{
+          color: black;
+          font-size: 14px;
+          display: inline-block;
+          margin-top: 15px;
+        }
+        .user_one{
+          width: 100%;
+          position: absolute;
+          top:50%;
+          -webkit-transform: translateY(-50%);
+          -moz-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          -o-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+}

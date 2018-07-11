@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/new_marge.css">
+    <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="lt_search">
+            <i class='mui-icon mui-icon-search'></i>
+            <input type="text" class="search_text" placeholder="请输入搜索关键字">
+        </div>
+    </div>
+    <div class="Incontent" >
+        <!--<div id="loader"></div>-->
+        <div class="mui-scroll-wrapper" id="pull" >
+            <div class="mui-scroll" >
+                <!--轮播图-->
+                <div class="index_banner">
+                    <div class="mui-slider">
+                        <div class="mui-slider-group mui-slider-loop banner_img">
+                            <div class="mui-slider-item index_banner"><a href="#" style="text-align: center"  ><img src="images/banner3.png  data-id="{{v.barcode}}" class='in_banner' /></a></div>
+                        </div>
+                        <div class="mui-slider-indicator">
+                            <div class="mui-indicator {{i===0?'mui-active':''}}"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--导航-->
+                <div class="navgate">
+                    <!--挖个坑-->
+                </div>
+                <!--产品列表页-->
+                <div class="goods-list" >
+                  <div class='goods-item' data-id='"+thisgoods[i].barcode+"'>
+                   <div class='goods_item_img'>
+                        <img src ="images/detail.jpg" alt='' style="width:100px; height:200px;">
+                        </div>
+                   <div class='goods_item_p'>
+                        <p>电风扇</p>
+                      </div>
+                    <div class='goods_item_span'>
+                        <span>包邮</span>
+                       <span>推荐</span>
+                        <span>新品</span>
+                        </div>
+                    <div class='goods_item_price'>
+                        <span><span style='color: #4038a9; font-size: 14px;'>123</span><span style='font-size: 12px;'><del>原价:123</del></span></span>
+                        <span style='font-size: 12px;margin-top: 2px;'>12购买</span>
+                        </div>
+                   </div>
+                    <div class='goods-item' data-id='"+thisgoods[i].barcode+"'>
+                        <div class='goods_item_img'>
+                            <img src ="images/product.jpg" alt='' style="width:100%; height:200px;">
+                        </div>
+                        <div class='goods_item_p'>
+                            <p>电风扇</p>
+                        </div>
+                        <div class='goods_item_span'>
+                            <span>包邮</span>
+                            <span>推荐</span>
+                            <span>新品</span>
+                        </div>
+                        <div class='goods_item_price'>
+                            <span><span style='color: #4038a9; font-size: 14px;'>123</span><span style='font-size: 12px;'><del>原价:123</del></span></span>
+                            <span style='font-size: 12px;margin-top: 2px;'>12购买</span>
+                        </div>
+                    </div>
+                    <div class='goods-item' data-id='"+thisgoods[i].barcode+"'>
+                        <div class='goods_item_img'>
+                            <img src ="images/active2.png" alt='' style="width:100%; height:200px;">
+                        </div>
+                        <div class='goods_item_p'>
+                            <p>电风扇</p>
+                        </div>
+                        <div class='goods_item_span'>
+                            <span>包邮</span>
+                            <span>推荐</span>
+                            <span>新品</span>
+                        </div>
+                        <div class='goods_item_price'>
+                            <span><span style='color: #4038a9; font-size: 14px;'>123</span><span style='font-size: 12px;'><del>原价:123</del></span></span>
+                            <span style='font-size: 12px;margin-top: 2px;'>12购买</span>
+                        </div>
+                    </div>
+                    <div class='goods-item' data-id='"+thisgoods[i].barcode+"'>
+                        <div class='goods_item_img'>
+                            <img src ="images/active1.png" alt='' style="width:100%; height:200px;">
+                        </div>
+                        <div class='goods_item_p'>
+                            <p>电风扇</p>
+                        </div>
+                        <div class='goods_item_span'>
+                            <span>包邮</span>
+                            <span>推荐</span>
+                            <span>新品</span>
+                        </div>
+                        <div class='goods_item_price'>
+                            <span><span style='color: #4038a9; font-size: 14px;'>123</span><span style='font-size: 12px;'><del>原价:123</del></span></span>
+                            <span style='font-size: 12px;margin-top: 2px;'>12购买</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<div class="lt_footer">
+<ul>
+<li class="now">
+<a >
+<span class="mui-icon mui-icon-weixin"></span>
+<p>首页</p>
+</a>
+</li>
+<li>
+<a >
+<span class="mui-icon mui-icon-weixin"></span>
+<p>分类</p>
+</a>
+</li>
+<li>
+<a >
+<span class="mui-icon mui-icon-weixin"></span>
+<p>购物车</p>
+</a>
+</li>
+<li>
+<a>
+<span class="mui-icon mui-icon-weixin"></span>
+<p>会员中心</p>
+</a>
+</li>
+</ul>
+</div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/fastclick.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+</body>
+</html>
